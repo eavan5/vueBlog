@@ -8,23 +8,10 @@
       </div>
     </div>
     <div class="bottom">
-      <Row type="flex" justify="space-between" class="code-row-bg">
-        <Col :xs="24" :sm="24" :lg="11">
-          <div class="box">
-            <img src="https://cdn.loli.life/img/20200228090907.png" />
-          </div>
-        </Col>
-        <Col :xs="24" :sm="24" :lg="11">
-          <div class="box">
-            <img src="https://cdn.loli.life/img/20200308203825.png" />
-          </div>
-        </Col>
-        <Col :xs="24" :sm="24" :lg="11">
-          <div class="box">
-            <img src="https://cdn.loli.life/img/20200228090907.png" />
-          </div>
-        </Col>
-
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">2</div>
+        <div class="item">2</div>
         <!-- <Col :sm="24" :lg="11">Col</Col> -->
       </Row>
     </div>
@@ -47,7 +34,7 @@ export default {
 .home {
   height: 100%;
   margin: 0 auto;
-  width: 60%;
+  width: 900px;
   padding: 30px 50px;
   // background-color: #666;
   .top {
@@ -66,22 +53,40 @@ export default {
     }
   }
   .bottom {
-    margin-top: 20px;
-    .ivu-col {
-      background-color: yellow;
-      height: 13vw;
-      margin-bottom: 20px;
-      overflow: hidden;
-      .box {
-        overflow: hidden;
-        img {
-          max-width: 100%;
-          max-height: 500px;
-          border-radius: 10px;
-          transition: box-shadow 0.3s;
+      margin-top: 40px;
+      text-align:center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 350px) ;
+      grid-template-rows: repeat(auto-fill, 200px);
+      grid-row-gap: 20px;
+      grid-column-gap: 30px;
+      justify-content:center;
+      
+      .item{
+            line-height: 200px;
+            font-weight: bold;
         }
-      }
-    }
+        .item:first-of-type{
+            background:#ef342a
+        }
+        .item:nth-of-type(2){
+            background:#00a0a0;
+        }
+        .item:nth-of-type(3){
+            background:#a0a0ff;
+        }
+        .item:nth-of-type(4){
+            background:#00a0a0;
+        }
+        .item:nth-of-type(5){
+            background:#a0a0ff;
+        }
+        .item:nth-of-type(6){
+            background:#a0a0ff;
+        }
+        .item:nth-of-type(7){
+            background:#a0a0ff;
+        }
   }
 }
 </style>

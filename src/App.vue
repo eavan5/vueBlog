@@ -38,16 +38,16 @@ body,
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 12vw;
-    background: url("./assets/images/bg2.png") top/cover;
+    height: 90px;
+    background: url("./assets/images/bg2.png") top/contain;
     .info {
       position: absolute;
-      bottom: 1vw;
+      bottom: 2px;
       left: 50%;
       transform: translateX(-50%);
       p {
         color: #fff;
-        font-size: 16px;
+        font-size: 12px;
       }
     }
   }
