@@ -20,7 +20,7 @@
     <div class="bar">
       <i class="iconfont icon-sousuo"></i>
     </div>
-    <div class="bar">
+    <div class="bar" @click="toLogin">
       <!-- 设置 -->
       <i class="iconfont icon-shezhi"></i>
     </div>
@@ -35,6 +35,9 @@ export default {
     },
     toTalk () {
       this.$router.push({ name: 'Talk' })
+    },
+    toLogin () {
+      this.$router.push({ name: 'Login' })
     }
   }
 }
@@ -57,6 +60,7 @@ export default {
   //   background-color: #999;
   z-index: 999;
   .bar {
+    cursor: pointer;
     height: 50px;
     i {
       font-size: 30px;

@@ -6,7 +6,12 @@ import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import './assets/style/reset.css'
 import './assets/iconfont/iconfont.css'
-
+import animated from 'animate.css'
+import axios from 'axios'
+import dayjs from "dayjs";
+Vue.prototype.$axios = axios
+Vue.prototype.$dayjs = dayjs
+Vue.use(animated)
 Vue.config.productionTip = false
 Vue.use(ViewUI)
 new Vue({

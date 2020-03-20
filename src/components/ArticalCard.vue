@@ -10,12 +10,12 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       //   img: require(imgURL)
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang='less' scoped>
