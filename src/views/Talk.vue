@@ -169,13 +169,13 @@
   </div>
 </template>
 <script>
-import HeadInfo from '../components/HeadInfo.vue'
+import HeadInfo from "../components/HeadInfo.vue";
 
 export default {
   components: {
     HeadInfo
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
@@ -184,6 +184,46 @@ export default {
   margin: auto;
 
   .content {
+    .paul-say {
+      column-gap: 10px;
+      column-count: 2;
+      div {
+        text-align: left;
+        margin-top: 15px;
+        padding: 10px 20px;
+        break-inside: avoid;
+        break-inside: avoid;
+        background: rgba(52, 152, 219, 0.05);
+        background-color: white;
+        border-left: 4px solid;
+        &:first-child {
+          margin-top: 0;
+        }
+        p:first-child {
+          text-indent: 2em;
+          font-size: 16px;
+        }
+        p:nth-child(2) {
+          text-align: right;
+        }
+        &:nth-child(2n) {
+          border-left-color: #9acd32;
+          background: rgba(154, 205, 50, 0.05);
+        }
+        &:nth-child(3n) {
+          border-left-color: #40e0d0;
+          background: rgba(64, 224, 208, 0.05);
+        }
+        &:nth-child(4n) {
+          border-left-color: #ff4500;
+          background: rgba(255, 69, 0, 0.05);
+        }
+        &:nth-child(5n) {
+          border-left-color: #f6a900;
+          background: rgba(138, 43, 226, 0.05);
+        }
+      }
+    }
   }
 }
 </style>
