@@ -8,7 +8,7 @@ import './assets/style/reset.css'
 import './assets/iconfont/iconfont.css'
 import animated from 'animate.css'
 import axios from 'axios'
-import dayjs from "dayjs";
+import dayjs from 'dayjs'
 Vue.prototype.$axios = axios
 Vue.prototype.$dayjs = dayjs
 Vue.use(animated)

@@ -11,23 +11,23 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      content: { title: "", bigImg: "", text: "", createdTime: "" }
-    };
+      content: { title: '', bigImg: '', text: '', createdTime: '' }
+    }
   },
-  async created() {
-    console.log(this.$route.query.articleId);
+  async created () {
+    console.log(this.$route.query.articleId)
 
-    const res = await this.$axios("/api/blogs/getdetail", {
+    const res = await this.$axios('/api/blogs/getdetail', {
       params: { articleId: this.$route.query.articleId }
-    });
-    console.log(res);
+    })
+    console.log(res)
     if (res.data.state === 0) {
-      this.content = res.data.data;
+      this.content = res.data.data
     }
   }
-};
+}
 </script>
 
 <style lang='less' scoped>
@@ -35,6 +35,7 @@ export default {
   width: 900px;
   margin: 0 auto;
   padding: 50px 10px;
+  padding-bottom: 200px;
   color: #67492e;
   .bigImg {
     text-align: center;

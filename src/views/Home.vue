@@ -22,25 +22,25 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  async created() {
-    const res = await this.$axios.get("/api/blogs/getList");
-    console.log(res);
+  async created () {
+    const res = await this.$axios.get('/api/blogs/getList')
+    console.log(res)
     if (res.data.state === 0) {
-      this.articleData = res.data.data;
+      this.articleData = res.data.data
     }
   },
   methods: {
-    goTo(id) {
-      this.$router.push(`/article?articleId=${id}`);
+    goTo (id) {
+      this.$router.push(`/article?articleId=${id}`)
     }
   },
-  data() {
+  data () {
     return {
       articleData: []
-    };
+    }
   },
-  name: "Home"
-};
+  name: 'Home'
+}
 </script>
 
 <style lang="less" scoped>
